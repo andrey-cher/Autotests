@@ -1,4 +1,4 @@
-package ru.idRamblerRegistration;
+package ru.mailRambler;
 
 import org.junit.After;
 import org.junit.Assert;
@@ -28,16 +28,18 @@ public class FirstTest {
         driver.findElementByCssSelector("[id=login]").sendKeys("Emailtest55@rambler.ru");
         driver.findElementByCssSelector("[id=password").sendKeys("Parol66666");
         driver.findElementByCssSelector("Input[type=\"Submit\"]").click();
-        System.out.println("ActualTitle is+"); //как вариант, количество входящих писем можно получить из заголовка страницы с почтой 
+        System.out.println("ActualTitle is+"); //РљР°Рє РІР°СЂРёР°РЅС‚, РєРѕР»РёС‡РµСЃС‚РІРѕ РІС…РѕРґСЏС‰РёС… РїРёСЃРµРј РјРѕР¶РЅРѕ РїРѕР»СѓС‡РёС‚СЊ РёР· Р·Р°РіРѕР»РѕРІРєР° СЃС‚СЂР°РЅРёС†С‹ СЃ РїРѕС‡С‚РѕР№
 
-
-
-
-
-
+    
     }
-
-
+    
+    
+    @After
+    public void close() {
+        driver.quit();
+    }
+    
+    
 
 
 }
