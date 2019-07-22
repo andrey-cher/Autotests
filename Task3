@@ -30,13 +30,15 @@ public class FirstTest {
         driver.findElementByCssSelector("Input[type=\"Submit\"]").click();
         System.out.println("ActualTitle is+"); //Как вариант, количество входящих писем можно получить из заголовка страницы с почтой
 
-
-
-
-
+    
     }
-
-
+    
+    
+    @After
+    public void close() {
+        driver.quit();
+    }
+    
 
 
 }
